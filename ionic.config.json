@@ -1,0 +1,7 @@
+{
+  "name": "thee-resume",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
