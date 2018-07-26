@@ -1,25 +1,24 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {  NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the ExpertisePage page.
+ * Generated class for the LeadershipPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
-  selector: 'page-expertise',
-  templateUrl: 'expertise.html',
+  selector: 'page-leadership',
+  templateUrl: 'leadership.html',
 })
-export class ExpertisePage {
+export class LeadershipPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ExpertisePage');
+    console.log('ionViewDidLoad LeadershipPage');
   }
 
 }

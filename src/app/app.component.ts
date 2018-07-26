@@ -1,10 +1,11 @@
+import { SkillsPage } from './../pages/skills/skills';
+import { LeadershipPage } from './../pages/leadership/leadership';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ExpertisePage } from '../pages/expertise/expertise';
 import { EducationPage } from '../pages/education/education';
 import { ContactPage } from '../pages/contact/contact';
 import { ExperiencePage } from '../pages/experience/experience';
@@ -26,8 +27,10 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Education', component: EducationPage },
       { title: 'Experience', component: ExperiencePage },
-      { title: 'Expertise', component: ExpertisePage },
+      { title: 'Leadership', component: LeadershipPage },
+      { title: 'Skills', component: SkillsPage },
       { title: 'Contact', component: ContactPage }
+
     ];
 
   }
