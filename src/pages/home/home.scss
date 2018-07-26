@@ -1,3 +1,14 @@
 page-home {
+::-webkit-scrollbar, *::-webkit-scrollbar { display: none; } //Disable scrollbar but be able to scroll
+
+}
+
+#home-container{
+  // background-image: url('../assets/imgs/Digital-Art-3-Pic-Wallpaper-1080x1920-380x676.jpg');
+  // background-size:auto;
+  // z-index: -1;
+}
+
+#home-message{
 
 }
