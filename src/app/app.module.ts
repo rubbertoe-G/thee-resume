@@ -1,3 +1,4 @@
+import { EducationDetailsPage } from './../pages/education-details/education-details';
 import { LeadershipPage } from './../pages/leadership/leadership';
 import { SkillsPage } from './../pages/skills/skills';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,6 +13,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { EducationPage } from '../pages/education/education';
 import { ContactPage } from '../pages/contact/contact';
 import { ExperiencePage } from '../pages/experience/experience';
+import { EducationProvider } from '../providers/education/education';
+import { ExperienceProvider } from '../providers/experience/experience';
+import { EducationDetailsPage } from '../pages/education-details/education-details';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,7 @@ import { ExperiencePage } from '../pages/experience/experience';
     HomePage,
     ExperiencePage,
     EducationPage,
+    EducationDetailsPage,
     ContactPage,
     SkillsPage,
     LeadershipPage
@@ -32,6 +37,7 @@ import { ExperiencePage } from '../pages/experience/experience';
     MyApp,
     HomePage,
     ExperiencePage,
+    EducationDetailsPage,
     EducationPage,
     ContactPage,
     SkillsPage,
@@ -40,7 +46,9 @@ import { ExperiencePage } from '../pages/experience/experience';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    EducationProvider,
+    ExperienceProvider
   ]
 })
 export class AppModule {}

@@ -1,3 +1,4 @@
+import { EducationDetailsPage } from './../pages/education-details/education-details';
 import { SkillsPage } from './../pages/skills/skills';
 import { LeadershipPage } from './../pages/leadership/leadership';
 import { Component, ViewChild } from '@angular/core';
@@ -29,7 +30,8 @@ export class MyApp {
       { title: 'Experience', component: ExperiencePage },
       { title: 'Leadership', component: LeadershipPage },
       { title: 'Skills', component: SkillsPage },
-      { title: 'Contact', component: ContactPage }
+      { title: 'Contact', component: ContactPage },
+      { title: 'Education Details', component: EducationDetailsPage }
 
     ];
 

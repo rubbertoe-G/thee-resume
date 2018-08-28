@@ -1,5 +1,7 @@
+import { EducationDetailsPage } from './../education-details/education-details';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { EducationProvider } from '../../providers/education/education';
 
 /**
  * Generated class for the EducationPage page.
@@ -15,11 +17,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class EducationPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public eduPvdr: EducationProvider,
+    public modalCtrl: ModalController
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EducationPage');
+  }
+
+  educations = this.eduPvdr.educations;
+
+  educationDetails(){
+    const modal = this.modalCtrl.create(EducationDetailsPage);
+    modal.present();
   }
 
 }
