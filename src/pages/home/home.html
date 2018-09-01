@@ -7,11 +7,12 @@
 </ion-header>
 
 <ion-content padding>
-  <div id="user-bg"></div>
-  <div id="user-content">
+  <div id="user-bg" ></div>
+  <div id="user-content" >
     <div id="user-info" padding>
       <img id="user-image" [src]="user.image">
       <h1 id="user-name">{{user.first_name}} {{user.last_name}}</h1>
+      <p>{{user.profession}}</p>
     </div>
   </div>
   <ion-card id="user-description">
@@ -25,13 +26,12 @@
     </ion-card-content>
     <ion-row>
       <ion-col>
-        <button ion-button icon-start clear small (click)='goTo(pages.experience)'>
+        <button ion-button icon-start clear small (click)='goTo(pages.education)'>
           <div>Learn more...</div>
         </button>
       </ion-col>
     </ion-row>
   </ion-card>
-
 
   <ion-card id="user-description">
     <!-- <img src=""/> -->
@@ -49,6 +49,39 @@
         </button>
       </ion-col>
   </ion-card>
+
+  <ion-card id="user-description">
+    <!-- <img src=""/> -->
+    <ion-card-header>
+      <h1>Leadership</h1>
+      <hr>
+    </ion-card-header>
+    <ion-card-content>
+      {{user.comment3}}
+    </ion-card-content>
+    <ion-col>
+        <button ion-button icon-start clear small (click)="goTo(pages.skills)">
+          <div>Learn more...</div>
+        </button>
+      </ion-col>
+  </ion-card>
+
+  <ion-card id="user-description">
+    <!-- <img src=""/> -->
+    <ion-card-header>
+      <h1>My Skills</h1>
+      <hr>
+    </ion-card-header>
+    <ion-card-content>
+      {{user.comment3}}
+    </ion-card-content>
+    <ion-col>
+        <button ion-button icon-start clear small (click)="goTo(pages.skills)">
+          <div>Learn more...</div>
+        </button>
+      </ion-col>
+  </ion-card>
+  
   <ion-card id="user-description">
     <!-- <img src=""/> -->
     <ion-card-header>

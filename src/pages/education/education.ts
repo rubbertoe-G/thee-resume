@@ -31,8 +31,10 @@ export class EducationPage {
 
   educations = this.eduPvdr.educations;
 
-  educationDetails(){
-    const modal = this.modalCtrl.create(EducationDetailsPage);
+  educationDetails(edu: any){
+    const modal = this.modalCtrl.create(EducationDetailsPage, {
+      selectedEducation: edu
+    });
     modal.present();
   }
 

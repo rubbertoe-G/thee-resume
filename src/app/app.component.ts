@@ -1,4 +1,3 @@
-import { EducationDetailsPage } from './../pages/education-details/education-details';
 import { SkillsPage } from './../pages/skills/skills';
 import { LeadershipPage } from './../pages/leadership/leadership';
 import { Component, ViewChild } from '@angular/core';
@@ -19,20 +18,18 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, icon: string,component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Education', component: EducationPage },
-      { title: 'Experience', component: ExperiencePage },
-      { title: 'Leadership', component: LeadershipPage },
-      { title: 'Skills', component: SkillsPage },
-      { title: 'Contact', component: ContactPage },
-      { title: 'Education Details', component: EducationDetailsPage }
-
+      { title: 'Home', icon: 'home' ,  component: HomePage },
+      { title: 'Education', icon:'book' , component: EducationPage },
+      { title: 'Experience', icon:'trending-up', component: ExperiencePage },
+      { title: 'Leadership', icon:'people', component: LeadershipPage },
+      { title: 'Skills', icon:'star', component: SkillsPage },
+      { title: 'Contact', icon:'phone-portrait', component: ContactPage },
     ];
 
   }

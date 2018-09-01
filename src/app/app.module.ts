@@ -1,4 +1,3 @@
-import { EducationDetailsPage } from './../pages/education-details/education-details';
 import { LeadershipPage } from './../pages/leadership/leadership';
 import { SkillsPage } from './../pages/skills/skills';
 import { BrowserModule } from '@angular/platform-browser';
