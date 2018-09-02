@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-toolbar color="primary">
+  <ion-toolbar color="secondary">
     <ion-title>Education Details</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="close()">
@@ -18,5 +18,29 @@
 
 
 <ion-content padding>
-   {{selectedEducation | json}}
+  <ion-card>
+    <img [src]="selectedEducation.backImage" />
+    <ion-card-header>
+      <h1>{{selectedEducation.name}}</h1>
+      <hr>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-list>
+        <ion-item>
+          <p item-start> Degree</p>
+          <p item-end>{{selectedEducation.degree}}</p>
+        </ion-item>
+        <ion-item>
+          <p item-start> General GPA: </p>
+          <p item-end>{{selectedEducation.gpaGeneral}}</p>
+        </ion-item>
+        <ion-item>
+          <p item-start> Graduation GPA: </p>
+          <p item-end><b>{{selectedEducation.gpaGrad}}</b><p>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

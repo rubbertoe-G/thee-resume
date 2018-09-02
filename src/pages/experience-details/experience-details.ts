@@ -1,34 +1,35 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
-import { Education } from '../../interfaces/common.interface';
+import { Experience } from '../../interfaces/common.interface';
+
 /**
- * Generated class for the EducationDetailsPage page.
+ * Generated class for the ExperienceDetailsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
- 
-
 @IonicPage()
 @Component({
-  selector: 'page-education-details',
-  templateUrl: 'education-details.html',
+  selector: 'page-experience-details',
+  templateUrl: 'experience-details.html',
 })
-export class EducationDetailsPage {
+export class ExperienceDetailsPage {
 
-  selectedEducation: Education;
+  selectedExperience: Experience;
+
 
   constructor(
-    public navCtrl: NavController,
+    public navCtrl: NavController, 
     public navParams: NavParams,
     public viewCtrl: ViewController
+
   ) {
-    this.selectedEducation = this.navParams.get('selectedEducation')
+    this.selectedExperience = this.navParams.get('selectedExperience')
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad EducationDetailsPage');
+    console.log('ionViewDidLoad ExperienceDetailsPage');
   }
 
   close(){

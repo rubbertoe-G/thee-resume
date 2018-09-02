@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {Education} from '../../interfaces/education.interface';
+import {Education} from '../../interfaces/common.interface';
 
 /*
   Generated class for the EducationProvider provider.
@@ -15,20 +15,28 @@ export class EducationProvider {
     console.log('Hello EducationProvider Provider');
   }
 
-  public educations: Array<Education> = [
+  educations: Array<Education> = [
     {
-      name:'Universidad de Puerto Rico',
-      place:'Mayagüez, Puerto Rico',
-      time:'Aug 2013 - Present',
-      image:'../../assets/imgs/education/uprm-logo.gif'
+      name:'University 1',
+      degree:'Bachelor of Science in Something',
+      place:'Place 1',
+      time:'Time 1',
+      image:'../../assets/imgs/education/uprm-logo.gif',
+      backImage:'../../assets/imgs/backgrounds/uprm-background.jpeg',
+      gpaGeneral: 3.85,
+      gpaGrad: 3.95
     },
 
     {
-      name:'Université de Montréal',
-      place:'Montréal, Canada',
-      time:'Jan 2016 - May 2016',
-      image:'../../assets/imgs/education/udem-logo.jpg'
-    }
+      name:'University 1',
+      degree:'Bachelor of Science in Something',
+      place:'Place 1',
+      time:'Time 1',
+      image:'../../assets/imgs/education/uprm-logo.gif',
+      backImage:'../../assets/imgs/backgrounds/uprm-background.jpeg',
+      gpaGeneral: 3.85,
+      gpaGrad: 3.95
+    },
 
   ]
 
