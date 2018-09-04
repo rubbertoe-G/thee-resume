@@ -4,6 +4,7 @@ import { EducationPage } from './../education/education';
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Nav, ViewController } from 'ionic-angular';
 import { LeadershipPage } from '../leadership/leadership';
+import { ImageViewerController } from 'ionic-img-viewer';
 
 @Component({
   selector: 'page-home',
@@ -32,12 +33,22 @@ export class HomePage {
     comment4:'comment here '
   }
 
-  constructor(public navCtrl: NavController, public viewCtrl: ViewController) {
-
+  constructor(public navCtrl: NavController, 
+    public viewCtrl: ViewController,
+    public imageViewerCtrl: ImageViewerController
+  ) {
   }
+
 
   goTo(p: any){
     this.navCtrl.push(p);
+  }
+
+  showImage(image){
+    const imageView = this.imageViewerCtrl.create(image,{
+      enableBackdropDismiss: true
+    });
+    imageView.present();
   }
 
 }

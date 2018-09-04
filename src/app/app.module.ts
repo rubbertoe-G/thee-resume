@@ -17,6 +17,7 @@ import { ExperienceProvider } from '../providers/experience/experience';
 import { EducationDetailsPage } from '../pages/education-details/education-details';
 import { ExperienceDetailsPage } from '../pages/experience-details/experience-details';
 import { LeadershipDetailsPage } from '../pages/leadership-details/leadership-details';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 @NgModule({
   declarations: [
@@ -30,10 +31,12 @@ import { LeadershipDetailsPage } from '../pages/leadership-details/leadership-de
     SkillsPage,
     LeadershipPage,
     LeadershipDetailsPage
-  ],
+    ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicImageViewerModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [

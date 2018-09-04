@@ -11,7 +11,7 @@
   <div id="user-bg" ></div>
   <div id="user-content" >
     <div id="user-info" padding>
-      <img id="user-image" [src]="user.image">
+      <img id="user-image" [src]="user.image" #myImage (click)="showImage(myImage)">
       <h1 id="user-name">{{user.first_name}} {{user.last_name}}</h1>
       <p>{{user.profession}}</p>
     </div>
