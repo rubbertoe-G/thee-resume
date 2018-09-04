@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams } from 'ionic-angular';
+import {  NavController, NavParams, ModalController } from 'ionic-angular';
+import { ExperienceProvider } from '../../providers/experience/experience';
+import { Experience } from '../../interfaces/common.interface';
+import { ExperienceDetailsPage } from '../experience-details/experience-details';
+import { LeadershipDetailsPage } from '../leadership-details/leadership-details';
 
 /**
  * Generated class for the LeadershipPage page.
@@ -14,11 +18,26 @@ import {  NavController, NavParams } from 'ionic-angular';
 })
 export class LeadershipPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public expericnePrvdr: ExperienceProvider,
+    public modalCtrl: ModalController
+  ) {
+    
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LeadershipPage');
+  }
+
+  leaderExps: Array<Experience> = this.expericnePrvdr.leadershipExps;
+
+  leadershipDetails(exp: Experience){
+    const modal = this.modalCtrl.create(LeadershipDetailsPage, {
+      selectedLeadership: exp
+    });
+    modal.present();
   }
 
 }

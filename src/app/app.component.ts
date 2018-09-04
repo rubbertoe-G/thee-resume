@@ -1,7 +1,7 @@
 import { SkillsPage } from './../pages/skills/skills';
 import { LeadershipPage } from './../pages/leadership/leadership';
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -20,16 +20,20 @@ export class MyApp {
 
   pages: Array<{title: string, icon: string,component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+    public platform: Platform, 
+    public statusBar: StatusBar, 
+    public splashScreen: SplashScreen
+  ) {
     this.initializeApp();
 
     this.pages = [
       { title: 'Home', icon: 'home' ,  component: HomePage },
-      { title: 'Education', icon:'book' , component: EducationPage },
-      { title: 'Experience', icon:'trending-up', component: ExperiencePage },
+      { title: 'Education', icon:'custom-diploma' , component: EducationPage },
+      { title: 'Experience', icon:'custom-experience', component: ExperiencePage },
       { title: 'Leadership', icon:'people', component: LeadershipPage },
       { title: 'Skills', icon:'star', component: SkillsPage },
-      { title: 'Contact', icon:'phone-portrait', component: ContactPage },
+      { title: 'Contact', icon:'mail', component: ContactPage },
     ];
 
   }
@@ -47,5 +51,6 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+    
   }
 }

@@ -15,32 +15,41 @@ import { ExperiencePage } from '../pages/experience/experience';
 import { EducationProvider } from '../providers/education/education';
 import { ExperienceProvider } from '../providers/experience/experience';
 import { EducationDetailsPage } from '../pages/education-details/education-details';
+import { ExperienceDetailsPage } from '../pages/experience-details/experience-details';
+import { LeadershipDetailsPage } from '../pages/leadership-details/leadership-details';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ExperiencePage,
+    ExperienceDetailsPage,
     EducationPage,
     EducationDetailsPage,
     ContactPage,
     SkillsPage,
-    LeadershipPage
-  ],
+    LeadershipPage,
+    LeadershipDetailsPage
+    ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicImageViewerModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     ExperiencePage,
-    EducationDetailsPage,
+    ExperienceDetailsPage,
     EducationPage,
+    EducationDetailsPage,
     ContactPage,
     SkillsPage,
-    LeadershipPage
+    LeadershipPage,
+    LeadershipDetailsPage
   ],
   providers: [
     StatusBar,

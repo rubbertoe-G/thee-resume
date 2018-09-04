@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
 
 /**
  * Generated class for the ContactPage page.
@@ -15,11 +16,47 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  @ViewChild('messageArea') messageArea: ElementRef;
+  message: string = '';
+
+  dataGroup: FormGroup;
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public toastCtrl: ToastController
+  ) {
+
+    this.dataGroup = new FormGroup({
+      email: new FormControl('', [
+        Validators.required,
+        Validators.email
+      ]),
+
+
+      message: new FormControl('', [
+        Validators.required,
+        Validators.min(5),
+        Validators.max(500)
+      ])
+    })
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContactPage');
   }
 
+  resize() {
+    this.messageArea.nativeElement.style.height = this.messageArea.nativeElement.scrollHeight + 'px';
+  }
+
+  sendMessage(){
+    let toast = this.toastCtrl.create({
+      message: 'Form is: ' + this.dataGroup.valid,
+      position: 'bottom',
+      showCloseButton: true
+    });
+  
+    toast.present();
+  }
 }

@@ -3,6 +3,8 @@ import { ExperiencePage } from './../experience/experience';
 import { EducationPage } from './../education/education';
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Nav, ViewController } from 'ionic-angular';
+import { LeadershipPage } from '../leadership/leadership';
+import { ImageViewerController } from 'ionic-img-viewer';
 
 @Component({
   selector: 'page-home',
@@ -14,31 +16,39 @@ export class HomePage {
   pages = {
     education: EducationPage,
     experience: ExperiencePage,
+    leadership: LeadershipPage,
     skills: SkillsPage
   }
 
   user = {
-    first_name:'Roberto',
-    last_name: 'Guzmán-Ortiz',
-    profession:'Computer Enginner Student',
-    location:'Aguas Buenas, PR',
+    first_name:'Name',
+    last_name: 'Lastname',
+    profession:'Proffesion',
+    location:'Location',
     background_image: '../../assets/img/user/background-5.jpg',
     image:'../../assets/imgs/user/girl-avatar.png',
-    comment1:'A Computer Egineering Student at '+
-      'University of Puerto Rico at Mayagüez. Aspiring to become an expert in fields of computer and software engineering, also become a specialist in cyber security. I have devoted '+
-      'my student carrer in doing so by participating in research, internships and co-op oportunities that have nourished my knowledge and personal experience',
-    comment2:'Project Manager, musician, athlete, devotion and persistency. These are the traits that best define my persona. Currently, I am a project manager '+
-      ' for the  Panda Hat: Cyber Security research group in which we engage the university and the public about cybersecurity awareness and more.',
-    comment3:'As part of extracurrivular activities',
-    comment4:'Speaking 4 languages, learning and perforhming project management duties, knowing multiple programming languages are some of the many things I am able to do '
+    comment1:'Comment here ',
+    comment2:'Comment here',
+    comment3:'COmment Here',
+    comment4:'comment here '
   }
 
-  constructor(public navCtrl: NavController, public viewCtrl: ViewController) {
-
+  constructor(public navCtrl: NavController, 
+    public viewCtrl: ViewController,
+    public imageViewerCtrl: ImageViewerController
+  ) {
   }
+
 
   goTo(p: any){
     this.navCtrl.push(p);
+  }
+
+  showImage(image){
+    const imageView = this.imageViewerCtrl.create(image,{
+      enableBackdropDismiss: true
+    });
+    imageView.present();
   }
 
 }

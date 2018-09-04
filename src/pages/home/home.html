@@ -3,6 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+    <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -10,7 +11,7 @@
   <div id="user-bg" ></div>
   <div id="user-content" >
     <div id="user-info" padding>
-      <img id="user-image" [src]="user.image">
+      <img id="user-image" [src]="user.image" #myImage (click)="showImage(myImage)">
       <h1 id="user-name">{{user.first_name}} {{user.last_name}}</h1>
       <p>{{user.profession}}</p>
     </div>
@@ -60,28 +61,12 @@
       {{user.comment3}}
     </ion-card-content>
     <ion-col>
-        <button ion-button icon-start clear small (click)="goTo(pages.skills)">
+        <button ion-button icon-start clear small (click)="goTo(pages.leadership)">
           <div>Learn more...</div>
         </button>
       </ion-col>
   </ion-card>
-
-  <ion-card id="user-description">
-    <!-- <img src=""/> -->
-    <ion-card-header>
-      <h1>My Skills</h1>
-      <hr>
-    </ion-card-header>
-    <ion-card-content>
-      {{user.comment3}}
-    </ion-card-content>
-    <ion-col>
-        <button ion-button icon-start clear small (click)="goTo(pages.skills)">
-          <div>Learn more...</div>
-        </button>
-      </ion-col>
-  </ion-card>
-  
+ 
   <ion-card id="user-description">
     <!-- <img src=""/> -->
     <ion-card-header>

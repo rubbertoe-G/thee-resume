@@ -1,3 +1,44 @@
 page-education-details {
+  
+  #edu-bg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin-top: -16px;
+    height: 160px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+  }
 
+  #edu-info {
+    position: absolute;
+    top: -70%;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    // color: white;
+  }
+
+  #edu-content {
+    position: relative;
+    margin-top: 75%;
+    padding-top: 76%;
+    text-align: left;
+  }
+
+  #edu-logo{
+    position: absolute;
+    left: 62%;
+    z-index: 2;
+    display: block;
+    border-radius: 50%;
+    width: auto;
+    height: 5em;
+    margin: 0 auto 0;
+    box-shadow: 0px 11px 20px -3px rgba(66, 63, 68, 0.75);
+    background-color: white;
+  }
 }
+

@@ -2,6 +2,7 @@ import { EducationDetailsPage } from './../education-details/education-details';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { EducationProvider } from '../../providers/education/education';
+import { Education } from '../../interfaces/common.interface';
 
 /**
  * Generated class for the EducationPage page.
@@ -31,7 +32,7 @@ export class EducationPage {
 
   educations = this.eduPvdr.educations;
 
-  educationDetails(edu: any){
+  educationDetails(edu: Education){
     const modal = this.modalCtrl.create(EducationDetailsPage, {
       selectedEducation: edu
     });
