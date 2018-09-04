@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {  NavController, NavParams } from 'ionic-angular';
+import { SkillGroup } from '../../interfaces/common.interface';
+import { SkillsProvider } from '../../providers/skills/skills';
 
 /**
  * Generated class for the SkillsPage page.
@@ -14,11 +16,22 @@ import {  NavController, NavParams } from 'ionic-angular';
 })
 export class SkillsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public skillPrdvr: SkillsProvider
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SkillsPage');
   }
+
+  mySkillGroup: Array<SkillGroup> = [
+    {
+      name:'Languages',
+      skills: this.skillPrdvr.languages
+    }
+  ]
 
 }

@@ -27,9 +27,9 @@ export class HomePage {
     location:'Location',
     background_image: '../../assets/img/user/background-5.jpg',
     image:'../../assets/imgs/user/girl-avatar.png',
-    comment1:'Comment here ',
+    comment1:'Hello my name is Jeff',
     comment2:'Comment here',
-    comment3:'COmment Here',
+    comment3:'Comment Here',
     comment4:'comment here '
   }
 

@@ -22,4 +22,14 @@ interface Experience {
 
 }
 
-export {Education, Experience}
+interface Skill {
+  name: string,
+  points?: number,
+}
+
+interface SkillGroup{
+  name:string,
+  skills: Array<Skill>
+}
+
+export {Education, Experience, Skill, SkillGroup}

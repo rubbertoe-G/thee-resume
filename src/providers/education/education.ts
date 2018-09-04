@@ -37,6 +37,16 @@ export class EducationProvider {
       gpaGeneral: 3.85,
       gpaGrad: 3.95
     },
+    {
+      name:'University 1',
+      degree:'Bachelor of Science in Something',
+      place:'Place 1',
+      time:'Time 1',
+      image:'../../assets/imgs/education/uprm-logo.gif',
+      backImage:'../../assets/imgs/backgrounds/uprm-background.jpeg',
+      gpaGeneral: 3.85,
+      gpaGrad: 3.95
+    },
 
   ]
 

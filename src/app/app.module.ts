@@ -18,6 +18,7 @@ import { EducationDetailsPage } from '../pages/education-details/education-detai
 import { ExperienceDetailsPage } from '../pages/experience-details/experience-details';
 import { LeadershipDetailsPage } from '../pages/leadership-details/leadership-details';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
+import { SkillsProvider } from '../providers/skills/skills';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     EducationProvider,
-    ExperienceProvider
+    ExperienceProvider,
+    SkillsProvider
   ]
 })
 export class AppModule {}
